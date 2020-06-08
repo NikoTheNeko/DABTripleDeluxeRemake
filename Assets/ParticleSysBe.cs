@@ -6,9 +6,9 @@ public class ParticleSysBe : MonoBehaviour
 {
 
    public ParticleSystem[] partsys;
-      public float incr;
+      private float incr;
+      private float emisRate;
 
-      Vector3 red = new Vector3(255,0,0);
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,11 @@ public class ParticleSysBe : MonoBehaviour
        //initialize color
        mainps.startColor = new Color(1f,1f,1f,1f);
        mainps2.startColor = new Color(1f,1f,1f,1f);
+       //initialize counters
        incr = 1.5f;
+       emisRate = 0;
+
+       Time.timeScale = 1.0f;
     }
 
     // Update is called once per frame
@@ -25,6 +29,8 @@ public class ParticleSysBe : MonoBehaviour
     {
        var mainps = partsys[0].main;
        var mainps2 = partsys[1].main;
+       var emissps = partsys[0].emission;
+       var emissps2 = partsys[1].emission;
 
 
        //on key down: GetKeyDown
@@ -36,13 +42,20 @@ public class ParticleSysBe : MonoBehaviour
            partsys[1].Play();
         }
 
-        //while space key pressed
         if(Input.GetKey(KeyCode.Space)){
-           //decrement
+           //-crement counters
             if(incr > 0f){
                incr-=0.001f;
             }
-            //set color
+            if(emisRate < 1000){
+               emisRate += 0.7f;
+            }
+
+            //update emission rate
+            emissps.rateOverTime = emisRate;
+            emissps2.rateOverTime = emisRate;
+
+            //update color
             mainps.startColor = new Color(1f,incr,incr,1f);
             mainps2.startColor = new Color(1f,incr,incr,1f);
             
@@ -51,8 +64,15 @@ public class ParticleSysBe : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.Space)){
            partsys[0].Stop();
            partsys[1].Stop();
-            //reset color
+            //reset -crements
            incr = 1.5f;
+           emisRate = 0;
+           Time.timeScale = 1f;
         }
+         if(emisRate > 800){
+            Time.timeScale = 0.15f;
+         }
+
     }
+
 }
