@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.18209575, g: 0.2277922, b: 0.30738991, a: 1}
+  m_IndirectSpecularColor: {r: 0.18209542, g: 0.22779144, b: 0.30738926, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1507,7 +1507,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -7101,7 +7101,7 @@ Transform:
   m_LocalScale: {x: 0.10219798, y: 0.693289, z: 0.06597369}
   m_Children: []
   m_Father: {fileID: 1543206114}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
 --- !u!64 &559506143
 MeshCollider:
@@ -7803,6 +7803,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659833996}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &684198267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 684198269}
+  - component: {fileID: 684198268}
+  m_Layer: 0
+  m_Name: PartSysControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &684198268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684198267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8bc18bf66a6c464489f48c3d6397739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partsys:
+  - {fileID: 260453821}
+  - {fileID: 831960808}
+  t: 0
+  incr: 255
+--- !u!4 &684198269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684198267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.015044361, y: -3.228126, z: 8.3346405}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &708282560
 GameObject:
   m_ObjectHideFlags: 0
@@ -8305,7 +8353,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -14063,7 +14111,7 @@ Transform:
   - {fileID: 230367665}
   - {fileID: 29675911}
   m_Father: {fileID: 1543206114}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1193901122
 GameObject:
@@ -15194,7 +15242,7 @@ Transform:
   m_LocalScale: {x: 0.07138485, y: 0.69328904, z: 0.07494886}
   m_Children: []
   m_Father: {fileID: 1543206114}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
 --- !u!64 &1469763970
 MeshCollider:
@@ -15420,11 +15468,11 @@ Transform:
   m_LocalPosition: {x: -2.413, y: -30.454, z: 49.569}
   m_LocalScale: {x: 1.4424, y: 1.4424, z: 1.4424}
   m_Children:
-  - {fileID: 1183329860}
   - {fileID: 1576723705}
   - {fileID: 2084903081}
   - {fileID: 1469763969}
   - {fileID: 559506142}
+  - {fileID: 1183329860}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15654,7 +15702,7 @@ Transform:
   - {fileID: 1855561471}
   - {fileID: 1837902534}
   m_Father: {fileID: 1543206114}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1605477921
 GameObject:
@@ -17119,7 +17167,7 @@ Transform:
   - {fileID: 1569496604}
   - {fileID: 103040631}
   m_Father: {fileID: 1543206114}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2141225217
 GameObject:
