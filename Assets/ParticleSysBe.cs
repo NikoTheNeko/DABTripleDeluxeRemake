@@ -56,8 +56,8 @@ public class ParticleSysBe : MonoBehaviour
             emissps2.rateOverTime = emisRate;
 
             //update color
-            mainps.startColor = new Color(1f,incr,incr,1f);
-            mainps2.startColor = new Color(1f,incr,incr,1f);
+            //mainps.startColor = new Color(1f,incr,incr,1f);
+            //mainps2.startColor = new Color(1f,incr,incr,1f);
             
          }
 
@@ -69,9 +69,7 @@ public class ParticleSysBe : MonoBehaviour
            emisRate = 0;
            Time.timeScale = 1f;
         }
-         if(emisRate > 800){
-            Time.timeScale = 0.15f;
-         }
+
 
     }
 
