@@ -1168,7 +1168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 210669663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dfe923b5ed47714197dd8a3e7624e92, type: 3}
+  m_Script: {fileID: 11500000, guid: 5289390ab00dc9a43b24396a19c047e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 221899330}
@@ -25898,6 +25898,7 @@ GameObject:
   - component: {fileID: 1687205518}
   - component: {fileID: 1687205517}
   - component: {fileID: 1687205516}
+  - component: {fileID: 1687205519}
   m_Layer: 8
   m_Name: DeepFry FX
   m_TagString: Untagged
@@ -25949,6 +25950,22 @@ Transform:
   m_Father: {fileID: 958855278}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1687205519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687205515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae3486e6669166429c1d5cf5b1e762b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initiateVector: {x: 0, y: 0, z: 0}
+  deactivateVector: {x: 0, y: 0, z: 0}
+  start: 0
+  end: 0
 --- !u!1 &1692158321
 GameObject:
   m_ObjectHideFlags: 0
