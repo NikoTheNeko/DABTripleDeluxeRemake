@@ -31,6 +31,8 @@ public class ParticleSysBe : MonoBehaviour
        var mainps2 = partsys[1].main;
        var emissps = partsys[0].emission;
        var emissps2 = partsys[1].emission;
+       var emissps3 = partsys[2].emission;
+       var emissps4 = partsys[3].emission;
 
 
        //on key down: GetKeyDown
@@ -40,6 +42,8 @@ public class ParticleSysBe : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space)){
            partsys[0].Play();
            partsys[1].Play();
+           partsys[2].Play();
+           partsys[3].Play();
         }
 
         if(Input.GetKey(KeyCode.Space)){
@@ -54,6 +58,8 @@ public class ParticleSysBe : MonoBehaviour
             //update emission rate
             emissps.rateOverTime = emisRate;
             emissps2.rateOverTime = emisRate;
+            emissps3.rateOverTime = emisRate;
+            emissps4.rateOverTime = emisRate;
 
             //update color
             //mainps.startColor = new Color(1f,incr,incr,1f);
@@ -62,8 +68,11 @@ public class ParticleSysBe : MonoBehaviour
          }
 
         if(Input.GetKeyUp(KeyCode.Space)){
-           partsys[0].Stop();
-           partsys[1].Stop();
+            partsys[0].Stop();
+            partsys[1].Stop();
+            partsys[2].Stop();
+            partsys[3].Stop();
+
             //reset -crements
            incr = 1.5f;
            emisRate = 0;
